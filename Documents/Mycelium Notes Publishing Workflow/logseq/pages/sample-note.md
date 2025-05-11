@@ -1,7 +1,5 @@
-
 title:: Sample Note
 type:: note
-
 
 # Sample Note
 
