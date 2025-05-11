@@ -1,5 +1,4 @@
 domains:
-  logseq: "notes-logseq.example.com"
-  obsidian: "notes-obsidian.example.com"
-  quarto: "notes-quarto.example.com"
-  
+  logseq: "logseq.metamechanic.net"
+  obsidian: "obsidian.metamechanic.net"
+  quarto: "quarto.metamechanic.net"
