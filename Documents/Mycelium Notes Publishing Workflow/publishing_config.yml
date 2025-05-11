@@ -1,0 +1,5 @@
+domains:
+  logseq: "notes-logseq.example.com"
+  obsidian: "notes-obsidian.example.com"
+  quarto: "notes-quarto.example.com"
+  
