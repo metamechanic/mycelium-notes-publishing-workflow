@@ -23,4 +23,4 @@ This workflow allows you to:
 
 1. Run the setup script:
    ```bash
-   python3 scripts/setup_repo.py --logseq-domain=your-domain.com
+   python3 scripts/setup_repo.py --logseq-domain=your-domain.com# Testing DNS and GitHub Pages
