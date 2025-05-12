@@ -1,19 +1,18 @@
-title:: Logseq Features Test
+title:: Logseq Features
 type:: note
 
-# Logseq Features Test
+# Logseq Features
 
-## Block References
-- This is a regular bullet
-  - This block can be referenced
-- You can link to internal blocks
+## Blocks and References
+- This is a block that can be referenced
+  - This is a nested block
+    - And this is nested deeper
 
-## Page Links
-- Link to [[Test Note]]
+## Page Properties
+public:: true
+category:: documentation
 
-## TODO Items
-- TODO Learn to sync between platforms
-- DONE Create test notes
-
-## Timestamps
-- Created: [[2025-05-11]]
+## Tasks
+- TODO Try publishing to GitHub Pages
+- DOING Fix CNAME configuration
+- DONE Set up repository
