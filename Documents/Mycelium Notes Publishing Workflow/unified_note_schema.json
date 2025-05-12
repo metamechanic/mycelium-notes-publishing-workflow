@@ -1,0 +1,295 @@
+{
+  "schema_version": "1.0",
+  "note_types": {
+    "note": {
+      "description": "General purpose note",
+      "frontmatter": {
+        "common": {
+          "title": "string",
+          "type": "string",
+          "tags": "array",
+          "created": "date",
+          "modified": "date"
+        },
+        "logseq_specific": {
+          "alias": "array",
+          "public": "boolean"
+        },
+        "obsidian_specific": {
+          "status": "string"
+        },
+        "quarto_specific": {
+          "format": "string",
+          "categories": "array",
+          "toc": "boolean"
+        }
+      },
+      "sections": {
+        "overview": {
+          "sync": true,
+          "logseq_format": "bullets",
+          "obsidian_format": "paragraphs",
+          "quarto_format": "paragraphs"
+        },
+        "details": {
+          "sync": true,
+          "logseq_format": "bullets",
+          "obsidian_format": "paragraphs",
+          "quarto_format": "paragraphs"
+        },
+        "notes": {
+          "sync": true,
+          "logseq_format": "bullets",
+          "obsidian_format": "paragraphs",
+          "quarto_format": "paragraphs"
+        },
+        "references": {
+          "sync": true,
+          "logseq_format": "bullets",
+          "obsidian_format": "bullets",
+          "quarto_format": "bullets"
+        }
+      }
+    },
+    "person": {
+      "description": "Person profile",
+      "frontmatter": {
+        "common": {
+          "title": "string",
+          "type": "string",
+          "tags": "array",
+          "birth": "date",
+          "death": "date",
+          "nationality": "string",
+          "occupation": "string"
+        }
+      },
+      "sections": {
+        "personal_details": {
+          "sync": true,
+          "logseq_format": "properties",
+          "obsidian_format": "yaml",
+          "quarto_format": "yaml"
+        },
+        "bio": {
+          "sync": true,
+          "logseq_format": "bullets",
+          "obsidian_format": "paragraphs",
+          "quarto_format": "paragraphs"
+        },
+        "key_accomplishments": {
+          "sync": true,
+          "logseq_format": "bullets",
+          "obsidian_format": "bullets",
+          "quarto_format": "bullets"
+        },
+        "works": {
+          "sync": true,
+          "logseq_format": "bullets",
+          "obsidian_format": "bullets",
+          "quarto_format": "bullets"
+        },
+        "analysis": {
+          "sync": false,
+          "obsidian_only": true,
+          "logseq_format": null,
+          "obsidian_format": "paragraphs",
+          "quarto_format": null
+        },
+        "visual_connections": {
+          "sync": false,
+          "quarto_only": true,
+          "logseq_format": null,
+          "obsidian_format": null,
+          "quarto_format": "code"
+        },
+        "notes": {
+          "sync": true,
+          "logseq_format": "bullets",
+          "obsidian_format": "paragraphs",
+          "quarto_format": "paragraphs"
+        },
+        "references": {
+          "sync": true,
+          "logseq_format": "bullets",
+          "obsidian_format": "bullets",
+          "quarto_format": "bullets"
+        }
+      }
+    },
+    "book": {
+      "description": "Book note",
+      "frontmatter": {
+        "common": {
+          "title": "string",
+          "type": "string",
+          "tags": "array",
+          "author": "string",
+          "published": "date",
+          "isbn": "string",
+          "rating": "number"
+        }
+      },
+      "sections": {
+        "summary": {
+          "sync": true,
+          "logseq_format": "bullets",
+          "obsidian_format": "paragraphs",
+          "quarto_format": "paragraphs"
+        },
+        "key_ideas": {
+          "sync": true,
+          "logseq_format": "bullets",
+          "obsidian_format": "bullets",
+          "quarto_format": "bullets"
+        },
+        "quotes": {
+          "sync": true,
+          "logseq_format": "bullets",
+          "obsidian_format": "blockquotes",
+          "quarto_format": "blockquotes"
+        },
+        "critique": {
+          "sync": false,
+          "obsidian_only": true,
+          "logseq_format": null,
+          "obsidian_format": "paragraphs",
+          "quarto_format": null
+        },
+        "visual_connections": {
+          "sync": false,
+          "quarto_only": true,
+          "logseq_format": null,
+          "obsidian_format": null,
+          "quarto_format": "code"
+        },
+        "notes": {
+          "sync": true,
+          "logseq_format": "bullets",
+          "obsidian_format": "paragraphs",
+          "quarto_format": "paragraphs"
+        },
+        "references": {
+          "sync": true,
+          "logseq_format": "bullets",
+          "obsidian_format": "bullets",
+          "quarto_format": "bullets"
+        }
+      }
+    },
+    "place": {
+      "description": "Place or location",
+      "frontmatter": {
+        "common": {
+          "title": "string",
+          "type": "string",
+          "tags": "array",
+          "coordinates": "string",
+          "country": "string",
+          "region": "string",
+          "visited": "date"
+        }
+      },
+      "sections": {
+        "description": {
+          "sync": true,
+          "logseq_format": "bullets",
+          "obsidian_format": "paragraphs",
+          "quarto_format": "paragraphs"
+        },
+        "history": {
+          "sync": true,
+          "logseq_format": "bullets",
+          "obsidian_format": "paragraphs",
+          "quarto_format": "paragraphs"
+        },
+        "notable_features": {
+          "sync": true,
+          "logseq_format": "bullets",
+          "obsidian_format": "bullets",
+          "quarto_format": "bullets"
+        },
+        "map": {
+          "sync": false,
+          "quarto_only": true,
+          "logseq_format": null,
+          "obsidian_format": null,
+          "quarto_format": "code"
+        },
+        "personal_notes": {
+          "sync": true,
+          "logseq_format": "bullets",
+          "obsidian_format": "paragraphs",
+          "quarto_format": "paragraphs"
+        },
+        "references": {
+          "sync": true,
+          "logseq_format": "bullets",
+          "obsidian_format": "bullets",
+          "quarto_format": "bullets"
+        }
+      }
+    },
+    "article": {
+      "description": "Article or paper",
+      "frontmatter": {
+        "common": {
+          "title": "string",
+          "type": "string",
+          "tags": "array",
+          "author": "string",
+          "publication": "string",
+          "date": "date",
+          "url": "string",
+          "doi": "string"
+        }
+      },
+      "sections": {
+        "summary": {
+          "sync": true,
+          "logseq_format": "bullets",
+          "obsidian_format": "paragraphs",
+          "quarto_format": "paragraphs"
+        },
+        "key_points": {
+          "sync": true,
+          "logseq_format": "bullets",
+          "obsidian_format": "bullets",
+          "quarto_format": "bullets"
+        },
+        "quotes": {
+          "sync": true,
+          "logseq_format": "bullets",
+          "obsidian_format": "blockquotes",
+          "quarto_format": "blockquotes"
+        },
+        "analysis": {
+          "sync": false,
+          "obsidian_only": true,
+          "logseq_format": null,
+          "obsidian_format": "paragraphs",
+          "quarto_format": null
+        },
+        "data_visualization": {
+          "sync": false,
+          "quarto_only": true,
+          "logseq_format": null,
+          "obsidian_format": null,
+          "quarto_format": "code"
+        },
+        "notes": {
+          "sync": true,
+          "logseq_format": "bullets",
+          "obsidian_format": "paragraphs",
+          "quarto_format": "paragraphs"
+        },
+        "references": {
+          "sync": true,
+          "logseq_format": "bullets",
+          "obsidian_format": "bullets",
+          "quarto_format": "bullets"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+# Quarto
+_site/
+.quarto/
+/.quarto/
+_freeze/
+
+# Obsidian
+.obsidian/workspace
+.obsidian/workspace.json
+.obsidian/cache
+
+# Logseq
+logseq/.recycle
+logseq/bak
+logseq/version-files
+logseq/graphs-cache.edn
+logseq/broken-config.edn
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# GitHub Pages
+_site/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
