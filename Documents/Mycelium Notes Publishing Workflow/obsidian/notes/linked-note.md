@@ -1,5 +1,8 @@
 ---
+categories: []
 created: '2025-05-12'
+date: '2025-05-12'
+format: html
 tags: network, links
 title: Connected Note
 type: note
@@ -9,10 +12,12 @@ type: note
 
 This note demonstrates linking to other notes.
 
-## Links
-- Link to [[Test Note]]
-- Link to [[GitHub Pages Test]]
+## Related Concepts
 
-## Related concepts
 - Knowledge graphs
 - Bidirectional linking
+
+## Links
+
+- Link to [[Test Note]]
+- Link to [[GitHub Pages Test]]
