@@ -1,6 +1,6 @@
 ---
 categories: []
-date: '2025-05-11'
+date: '2025-05-12'
 format: html
 title: Sample Note
 type: note

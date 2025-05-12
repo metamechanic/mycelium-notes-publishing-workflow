@@ -2,7 +2,6 @@
 categories: []
 date: '2025-05-12'
 format: html
-title: Logseq Features Test
-type: note
+title: Github Pages Test
 ---
 

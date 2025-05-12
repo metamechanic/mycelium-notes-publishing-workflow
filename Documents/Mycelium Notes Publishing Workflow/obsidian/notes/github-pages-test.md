@@ -1,7 +1,6 @@
 ---
 created: '2025-05-12'
 tags: []
-title: Sample Note
-type: note
+title: Github Pages Test
 ---
 
