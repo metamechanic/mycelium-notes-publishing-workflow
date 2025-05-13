@@ -1,0 +1,23 @@
+name: Setup GitHub Pages Branches
+
+on:
+  workflow_dispatch:  # Manual trigger only
+
+jobs:
+  setup-pages-logseq:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages-logseq
+          
+  setup-pages-obsidian:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages-obsidian
