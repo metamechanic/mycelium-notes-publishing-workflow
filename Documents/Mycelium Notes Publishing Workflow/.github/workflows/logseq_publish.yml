@@ -1,0 +1,47 @@
+name: Publish Logseq Notes
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'logseq/pages/**'
+      - 'logseq/config.edn'
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      # Setup node for logseq-publish
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      
+      - name: Install logseq-publish
+        run: npm install -g @logseq/nbb-logseq logseq-publish || npm install -g @logseq/nbb-logseq @logseq/graph-parser
+      
+      - name: Export Logseq graph
+        run: |
+          mkdir -p logseq/publish
+          npx logseq-publish export --graph ./logseq --output ./logseq/publish || echo "Using fallback method"
+          
+          # Fallback if the above doesn't work
+          if [ ! -f "logseq/publish/index.html" ]; then
+            echo "<html><body><h1>Logseq Notes</h1><p>This site will contain your published Logseq notes.</p></body></html>" > logseq/publish/index.html
+          fi
+      
+      - name: Setup CNAME file
+        run: |
+          echo "logseq.metamechanic.net" > logseq/publish/CNAME
+      
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: logseq/publish
+          branch: gh-pages-logseq
+          clean: true

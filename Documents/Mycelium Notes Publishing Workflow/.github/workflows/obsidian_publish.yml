@@ -1,0 +1,96 @@
+name: Publish Obsidian Notes
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'obsidian/**/*.md'
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install mkdocs mkdocs-material pymdown-extensions
+      
+      - name: Generate MkDocs configuration
+        run: |
+          cat > mkdocs.yml << 'CONFIG'
+          site_name: Metamechanic Notes
+          site_url: https://obsidian.metamechanic.net
+          theme:
+            name: material
+            palette:
+              scheme: slate
+            features:
+              - navigation.tracking
+              - navigation.sections
+              - navigation.expand
+              - navigation.indexes
+              - navigation.top
+              - search.highlight
+              - search.share
+              - content.code.copy
+          markdown_extensions:
+            - pymdownx.highlight
+            - pymdownx.superfences
+            - pymdownx.inlinehilite
+            - pymdownx.tabbed
+            - pymdownx.tasklist:
+                custom_checkbox: true
+            - footnotes
+            - meta
+            - def_list
+            - attr_list
+            - md_in_html
+          plugins:
+            - search
+          CONFIG
+      
+      - name: Prepare Obsidian content for MkDocs
+        run: |
+          mkdir -p docs
+          # Copy all .md files from obsidian
+          find obsidian -name "*.md" -exec cp {} docs/ \;
+          
+          # Create index file
+          cat > docs/index.md << 'EOF'
+          # Metamechanic Notes
+          
+          Welcome to my knowledge base.
+          
+          ## Categories
+          
+          - [People](People/index.md)
+          - [Books](Books/index.md)
+          - [Places](Places/index.md)
+          - [Organizations](Organizations/index.md)
+          - [Articles](Articles/index.md)
+          - [Notes](Notes/index.md)
+          EOF
+      
+      - name: Build site
+        run: mkdocs build --site-dir obsidian/publish
+      
+      - name: Setup CNAME file
+        run: |
+          echo "obsidian.metamechanic.net" > obsidian/publish/CNAME
+      
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: obsidian/publish
+          branch: gh-pages-obsidian
+          clean: true
